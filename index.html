@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="wrapper">
+        <div id="game-field"></div>
+        <button id="replay" disabled="true">replay</button>
+    </div>
+</body>
+<style>
+    body {
+        background-color: #4b3f3f
+    }
+
+    .wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 2rem;
+    }
+    
+    #game-field {
+        width: 500px;
+        height: 500px;
+        border: 5px solid black;
+        display: grid;
+        grid-template-columns: repeat(100, 1fr);
+        grid-template-rows: repeat(100, 1fr);
+    }
+
+    .live {
+        background-color: black;
+    }
+
+    .dead {
+        background-color: white;
+    }
+</style>
+<script src="cellularAutomata.js"></script>
+</html>
